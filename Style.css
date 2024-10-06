@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Merriweather;
+    transition: all ease-in 0.4s;
+    overflow: auto;
+    scrollbar-width: none;
+}
+
+.header{
+    width: 100%;
+    height: 50px;
+    background: rgb(21, 245, 245);
+    color: white;
+    display: grid;
+    place-items: center;
+    text-shadow: 2px 2px 8px black;
+}
+.container{
+    width: 100%;
+    height: 92vh;
+    background: rgb(211, 254, 255);
+    /*linear-gradient(to right, rgb(100,161,255),rgb(139,252,254));*/
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 40px;
+}
+.container .shopName{
+    background: linear-gradient(to left,rgb(247, 162, 0),rgb(248, 232, 49),royalblue,rgb(4, 123, 213));
+    color: transparent;
+    -webkit-background-clip: text;
+    position: relative;
+    overflow: hidden;
+}
+.container .shopName::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(211, 254, 255);
+    border-left: 2px solid black;
+    transition: all ease 0.4s;
+    animation: anim infinite steps(12) 4s;
+}
+@keyframes anim{
+    50%{
+        left: 0%;
+    }
+    100%{
+        left: 100%;
+    }
+}
+
+.flipkart{
+    background: linear-gradient(to left,rgb(247, 162, 0),rgb(248, 232, 49),royalblue,rgb(4, 123, 213));
+    color: transparent !important;
+    -webkit-background-clip: text !important;
+}
+.nykaa{
+    background: linear-gradient(to right,red,pink) !important;
+    color: transparent !important;
+    -webkit-background-clip: text !important;
+}
+.myntra{
+    background: linear-gradient(to right,rgb(241, 58, 177),rgb(231, 39, 68),rgb(253, 145, 60),rgb(240, 85, 36)) !important;
+    color: transparent !important;
+    -webkit-background-clip: text !important;
+}
+
+.flipkartPanel{
+    width: 100%;
+    height: 90vh;
+    background: linear-gradient(to right,
+    rgb(247, 162, 0),rgb(248, 232, 49));
+}
+.myntraPanel{
+    width: 100%;
+    height: 90vh;
+    background:linear-gradient(to right,rgb(241, 58, 177),rgb(231, 39, 68),rgb(253, 145, 60));
+}
+.Fheader{
+    width: 100%;
+    height: 50px;
+    background: rgb(100,161,255);
+    color: white;
+    display: grid;
+    place-items: center;
+    text-shadow: 2px 2px 8px black;
+}
+.Mheader{
+    width: 100%;
+    height: 50px;
+    background: red;
+    color: white;
+    display: grid;
+    place-items: center;
+    text-shadow: 2px 2px 8px black;
+}
+
+.flipkartPanel .flipkartContainer,
+.myntraPanel .myntraContainer,
+.nykaaPanel .nykaaContainer{
+    width: 100%;
+    height: 92vh;
+    background: transparent;
+}
+.flipkartPanel .flipkartContainer .cards,
+.myntraPanel .myntraContainer .cards{
+    width: 100%;
+    height: 60%;
+    margin-top: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 15px;
+    position: relative;
+}
+.flipkartPanel .flipkartContainer .cards .card,
+.myntraPanel .myntraContainer .cards .card{
+    width: 240px;
+    height: 100%;
+    border-radius: 5px;
+    border: 2px solid gray;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+}
+.flipkartPanel .flipkartContainer .cards .card .imgCard{
+    width: 100%;
+    height: 80%;
+}
+.flipkartPanel .flipkartContainer .cards .card .imgCard img,
+.myntraPanel .myntraContainer .cards .card .imgCard img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 5px;
+}
+.flipkartPanel .flipkartContainer .cards .card .imgHead{
+    width: 100%;
+    height: 20%;
+    display: grid;
+    place-items: center;
+}
+.flipkartPanel .flipkartContainer .cards .card .imgHead p{
+    color: green;
+}
+
+.myntraPanel .myntraContainer .cards .card .imgCard{
+    width: 100%;
+    height: 100%;
+}
+.nykaaPanel{
+    width: 100%;
+    height: 90vh;
+    background:linear-gradient(to right,pink,red);
+}
+.Nheader{
+    width: 100%;
+    height: 50px;
+    background: rgb(252,39,121);
+    color: white;
+    display: grid;
+    place-items: center;
+    text-shadow: 2px 2px 8px black;
+}
+.nykaaPanel .nykaaContainer .cards{
+    width: 100%;
+    height: 60%;
+    margin-top: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 15px;
+    position: relative;
+}
+.nykaaPanel .nykaaContainer .cards .card{
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background: transparent;
+}
+.nykaaPanel .nykaaContainer .cards .card .imgCard img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 50%;
+}
+.nykaaPanel .nykaaContainer .cards .nayCard .naykaaInfo{
+    width: 100%;
+    height: 20%;
+    margin-top: 10px;
+    display: grid;
+    place-items: center;
+}
+.nykaaPanel .nykaaContainer .cards .nayCard .naykaaInfo p{
+    color: gray;
+}
+
+.otherPanel{
+    width: 100%;
+    height: 400vh;
+    background: rgb(211, 254, 255);
+}
+.otherPanel .otherContainer{
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5em;
+    overflow: hidden;
+}
+.otherPanel .otherContainer .card{
+    width: 200px;
+    height: 200px;
+    border-radius: 20% 50% 20% 50%/50% 20% 50% 20%;
+    transition: all ease-in 0.4s;
+}
+.otherPanel .otherContainer .card img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 20% 50% 20% 50%/50% 20% 50% 20%;
+}
+
+.reaveal{
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all ease-in 0.4s;
+}
+.active{
+    transform: translateY(0px);
+    opacity: 1;
+    transition: all ease-in 0.4s;
+}
